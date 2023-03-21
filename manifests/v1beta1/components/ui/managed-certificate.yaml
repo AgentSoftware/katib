@@ -1,0 +1,7 @@
+﻿apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: katib-managed-cert
+spec:
+  domains:
+    - katib.data.api.street.co.uk

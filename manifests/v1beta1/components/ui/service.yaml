@@ -6,10 +6,12 @@ metadata:
   namespace: kubeflow
   labels:
     katib.kubeflow.org/component: ui
+  annotations:
+    cloud.google.com/backend-config: '{"default": "katib-backend-config"}'
 spec:
   type: ClusterIP
   ports:
-    - port: 80
+    - port: 8080
       protocol: TCP
       name: ui
       targetPort: 8080
